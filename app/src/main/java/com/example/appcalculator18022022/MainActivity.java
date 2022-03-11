@@ -37,11 +37,11 @@ public class MainActivity extends AppCompatActivity {
 //        Log.d("BBB",number7 + "");
 
         // 8 : Random
-        Random random = new Random();
+//        Random random = new Random();
         // 0 -> bound - 1
 
         // 5 -> 13
-        int number8 = random.nextInt(10);
-        Log.d("BBB",number8 + "");
+//        int number8 = random.nextInt(13 - 5 + 1) + 5;
+//        Log.d("BBB",number8 + "");
     }
 }
