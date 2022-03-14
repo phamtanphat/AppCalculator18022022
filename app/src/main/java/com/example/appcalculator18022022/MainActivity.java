@@ -4,10 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+
+    EditText mEdt1,mEdt2;
+    TextView mTvResult;
+    Button mBtnPlus,mBtnMinus,mBtnMultiplication,mBtnDivision;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,5 +50,30 @@ public class MainActivity extends AppCompatActivity {
         // 5 -> 13
 //        int number8 = random.nextInt(13 - 5 + 1) + 5;
 //        Log.d("BBB",number8 + "");
+
+//        int a = 5;
+//        int b = a;
+//
+//        nếu a thay đổi thì b có thay đổi hay không và tại sao
+
+//        Object o = new Object();
+//        Object o1 = new Object();
+//
+//        Log.d("BBB","Before o : " + o.toString());
+//        Log.d("BBB","Before o1 : " + o1.toString());
+//        // o1 sẽ truyền tham chiếu (vùng nhớ cho thằng o);
+//        o = o1;
+//
+//        Log.d("BBB","After o : " + o.toString());
+//        Log.d("BBB","After o1 : " + o1.toString());
+
+        // ánh xạ
+        mEdt1 = findViewById(R.id.editTextNumber1);
+        mEdt2 = findViewById(R.id.editTextNumber2);
+        mTvResult = findViewById(R.id.textViewResult);
+        mBtnPlus = findViewById(R.id.buttonPlus);
+        mBtnMinus = findViewById(R.id.buttonMinus);
+        mBtnMultiplication = findViewById(R.id.buttonMultiplication);
+        mBtnDivision = findViewById(R.id.buttonDivision);
     }
 }
