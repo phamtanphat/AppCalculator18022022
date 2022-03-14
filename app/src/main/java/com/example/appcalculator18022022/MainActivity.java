@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -75,5 +77,26 @@ public class MainActivity extends AppCompatActivity {
         mBtnMinus = findViewById(R.id.buttonMinus);
         mBtnMultiplication = findViewById(R.id.buttonMultiplication);
         mBtnDivision = findViewById(R.id.buttonDivision);
+
+        mBtnPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Lấy dữ liệu từ edittext
+                String inputNumber1 = mEdt1.getText().toString();
+                String inputNumber2 = mEdt2.getText().toString();
+
+                // 2 input không được để rỗng
+                if (inputNumber1.isEmpty() || inputNumber2.isEmpty()){
+//                    Log.d("BBBB","Input 1 or 2 is empty");
+                    //Thông báo
+                    Toast.makeText(MainActivity.this,"Input 1 or 2 is empty",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
     }
+
+
+
 }
