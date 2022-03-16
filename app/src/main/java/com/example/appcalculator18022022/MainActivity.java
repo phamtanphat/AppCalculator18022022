@@ -90,7 +90,18 @@ public class MainActivity extends AppCompatActivity {
 //                    Log.d("BBBB","Input 1 or 2 is empty");
                     //Thông báo
                     Toast.makeText(MainActivity.this,"Input 1 or 2 is empty",Toast.LENGTH_LONG).show();
+                    return;
                 }
+
+                // Thỏa có dữ liệu
+                int number1 = Integer.parseInt(inputNumber1);
+                int number2 = Integer.parseInt(inputNumber2);
+
+                int result = number1 + number2;
+
+                String textResult = String.format("%d + %d = %d",number1 , number2 , result);
+                mTvResult.setText(textResult);
+
             }
         });
 
